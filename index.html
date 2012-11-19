@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html5="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>不使用JS，让IE6-8支持HTML5</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <style>
+                .section, section, html5\:section {
+                    display: block;
+                    padding: .5em;
+                    border-left: 3px solid #ddd;
+                    color: #999;
+                }
+            </style>
+            <script>
+                window.onload = function(){
+                  alert(  document.getElementById("aa").innerHTML)
+                  alert(  document.getElementsByTagName("section")[0].innerHTML)
+                    alert(  document.getElementsByTagName("SECTION")[0].innerHTML)
+                }
+            </script>
+    </head>
+    <body>
+        <html5:section id="aa">xxxxxxxxxxx</html5:section>
+    </body>
+</html>
